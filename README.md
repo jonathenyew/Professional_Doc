@@ -7,7 +7,7 @@ Contains the latest version of my resume and cover letter tailored for various j
 ## Education
 Includes academic transcripts and certificates from completed courses and training programs.
 
-## <a name="Portfolio" /> Portfolio
+## <a name="https://github.com/jonathenyew/Professional_Doc/tree/Portfolio" /> Portfolio
 Showcases my projects and presentations, highlighting my skills and accomplishments.
 
 ## Cybersecurity_Tools
