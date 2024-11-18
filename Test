@@ -1,0 +1,21 @@
+(function executeRule(current, gForm, gS) {
+    // Check if the "Department" field is empty
+    if (!gForm.getValue('department')) {
+        // Get the 'Open For' user's sys_id
+        var openForUser = gForm.getValue('open_for');
+        
+        if (openForUser) {
+            // Perform a GlideAjax call to fetch the department
+            var ga = new GlideAjax('UserInfoUtil'); // Assume a script include called 'UserInfoUtil'
+            ga.addParam('sysparm_name', 'getDepartment');
+            ga.addParam('sysparm_user_id', openForUser);
+            ga.getXMLAnswer(function(response) {
+                var department = response;
+                if (department) {
+                    // Set the department field but allow users to change it
+                    gForm.setValue('department', department);
+                }
+            });
+        }
+    }
+})(current, gForm, gS);
